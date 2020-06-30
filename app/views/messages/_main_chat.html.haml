@@ -1,19 +1,27 @@
 .Chat
   .RightHeader
     .RightHeader__group
-      .RightHeader__groupName
-      .RightHeader__memberList
-        .RightHeader__memberName
-    .RightHeader__editBtn
+      .RightHeader__groupName 
+        hogehoge
+      %ul.RightHeader__memberList
+        Member：
+        %li.RightHeader__members 
+          hogehoge
+    %a{ href: "/#", class: "RightHeader__editBtn" }
+      Edit
   .MessageField
     .MessageBox
       .MessageInfo
-        .Message__userName
-        .Message__date
+        .MessageInfo__userName hogehoge
+        .MessageInfo__date 年月日
       .Message
-        .Message__content
+        %p.Message__content test
   .Footer
-    .Form__contents
-      .Form__inputMessage
-      .Form__inputImage
-      .From__submit
+    %form.Form
+      .input{ type: "hidden" }
+      .Form__contents
+        %input{ class: "Form__inputContent", placeholder: "type a message", type: "text" }
+        %label{ class: "Form__inputImage", for: "message_image" }
+          = icon('far', 'image', class: 'Form__icon')
+          %input{ class: "Form__inputImage--hidden", type: "file", name: "message[image]", id: "message_image" }
+      %input{ class: "Form__submit", type: "submit", name: "commit", value: "Send" }
