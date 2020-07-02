@@ -1,0 +1,27 @@
+.Chat
+  .RightHeader
+    .RightHeader__group
+      .RightHeader__groupName 
+        hogehoge
+      %ul.RightHeader__memberList
+        Member：
+        %li.RightHeader__members 
+          hogehoge
+    = link_to "/#", class: "RightHeader__editBtn"  do
+      Edit
+  .MessageField
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__userName hogehoge
+        .MessageInfo__date 2020年6月30日
+      .Message
+        %p.Message__content test
+  .Footer
+    %form.Form
+      .input{ type: "hidden" }
+      .Form__contents
+        %input{ class: "Form__inputContent", placeholder: "type a message", type: "text" }
+        %label{ class: "Form__inputImage", for: "message_image" }
+          = icon('far', 'image', class: 'Form__icon')
+          %input{ class: "Form__inputImage--hidden", type: "file", name: "message[image]", id: "message_image" }
+      %input{ class: "Form__submit", type: "submit", name: "commit", value: "Send" }
