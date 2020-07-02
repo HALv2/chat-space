@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 
+gem 'devise'
+
 gem 'font-awesome-sass'
 
 # Reduces boot times through caching; required in config/boot.rb
