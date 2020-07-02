@@ -11,7 +11,11 @@
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .GroupList
-    .Group
-      = link_to do
-        .Group__name hogehoge
-        .Group__notification no message
+    - current_user.groups.each do |group|
+      .Group
+        = link_to "#" do
+          .Group__name 
+            = group.name
+          .Group__notification 
+            no message
+        
