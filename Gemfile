@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+ 
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 
 gem 'font-awesome-sass'
